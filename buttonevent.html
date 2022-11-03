@@ -6,21 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Button Functionality</title>
   </head>
+<style>
+  body{
+    background-color: rgb(171, 83, 146);
+  }
+  .container{
+    width: 35%;
+    height: 35%;
+    background-color: gold;
+    border:  3px solid blue;
+    margin: auto;
+  }
+   .output{
+  width: 35%;
+    height: 35%;
+    background-color:pink;
+    border:  3px solid ghostwhite;
+  }
+</style>
   <body>
-    <h1>hello</h1>
-    <label>First Name:</label>
-    <tr>
-      <input id="name" type="text" placeholder="Enter Your Name" required />
-    </tr>
-    <button id="btn" onclick="fun()">click me!</button>
-    <h2 id="mgs"></h2>
+    <center>
+      <div class="container">
+      <h1>Application Form</h1>
+
+      <label>Name:</label>
+
+      <input
+        id="name"
+        type="text"
+        placeholder="Enter Your Name"
+        required
+      /><br /><br />
+      <label>Address:</label>
+      <input
+        id="address"
+        type="text"
+        placeholder="Enter Your Address"
+        required
+      /><br /><br />
+
+      <button id="btn" onclick="fun()">click me!</button><br /><br />
+</div>
+<div class="output">
+      <!-- <h1>Applicant Details</h1> -->
+      <h1 id="text"></h1>
+      <h2 id="Name"></h2>
+      <br />
+      <h2 id="Address"></h2>
+    </center>
+    <h2 id="Name"></h2>
+    <br />
+    <h2 id="Address"></h2>
+    </div>
   </body>
   <script>
-    let str = "arman";
+    let str = "Dear Applicant";
+
     function fun() {
-      document.getElementById("mgs").innerHTML = str;
-      //  document.getElementById("name").innerHTML = str;
-      // alert("Thank You \n" + str);
+      const name = document.getElementById("name").value;
+      const address = document.getElementById("address").value;
+      document.getElementById("text").innerHTML = "Applicant Details";
+      document.getElementById("Name").innerHTML = name;
+      document.getElementById("Address").innerHTML = address;
+
+      alert("Thank You \n" + str);
     }
   </script>
 </html>
