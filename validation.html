@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+        width: 100vh;
+      }
+      #container {
+        background-color: yellow;
+        width: 30%;
+        height: 30%;
+        border: solid 3px blue;
+        box-shadow: 0 0 0 0.2rem rgb(230, 77, 11, 0.25);
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="message.html" name="myform" onsubmit="return(Validate());"">
+      <center id="container">
+        <h1>Login</h1>
+        <label>Email id: </label>
+        <input
+          name="email"
+          placeholder="Enter Your Email"
+          type="text" id="text"
+        /><br /><br />
+        <label>password: </label>
+        <input
+          name="password"
+          placeholder="Enter Your Password"
+          type="text"
+        /><br /><br />
+        <button type="submit" id="btn">Submit</button><br /><br />
+      </center>
+    </form>
+    <script>
+      function Validate() {
+          
+        if (document.myform.email.value == "") {
+     
+          alert("Please provide your Email id");
+          document.myform.email.focus();
+          return false;
+        } else if (document.myform.password.value == "") {
+          alert("Please provide your password");
+          document.myform.password.focus();
+          return false;
+        } else {
+            return true;
+          
+        }
+
+          var mail=document.getElementById("text").value;
+            var regx=/^([a-zA-Z0-9\.]+)@([a-zA-Z0-9])+(.[a-z]+)?$/
+
+            if(regx.text(mail)){
+                alert("You have provided a valid Email ID")
+                return true
+            }
+            else{
+                alert("Sorry! Incorrect Email ID")
+                return false
+            }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Javascript Arman Tutorials</h1>
+    <title>Function In Javascript</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="fun_expression"></p>
+    <p id="val"></p>
+    <p id="cons"></p>
+    <p id="obj"></p>
+
+    <!-- <script>
+        //function
+      function fun(val) {
+        document.getElementById("demo").innerHTML = val * val;
+      }
+      fun(3);
+    </script>
+    // function expression
+    <script>
+      let x = function () {
+        alert("Dont take too much stress, Everything will be fine");
+      };
+      let y = x;
+      document.getElementById("fun_expression").innerHTML = y();
+    </script> -->
+    <!-- //function as  values-->
+    <!-- <script type="text/Javascript">
+      function fun(a,b){
+          return a*b;
+      }
+      let x=fun(3,4);
+      document.getElementById("val").innerHTML=x;
+    </script> -->
+    <!-- //function constructor -->
+
+    <!-- <script>
+      let myfunction = new Function("a", "b", "return a+b");
+      let x = myfunction(3, 4);
+      document.getElementById("cons").innerHTML = x;
+    </script> -->
+</body>    <!-- <script>
+      var body = "return Math.PI*rad *rad";
+      var circle = new Function("rad", body);
+      alert(circle(5));
+      var x = circle(5);
+      document.getElementById("obj").innerHTML = " the value of circle is" + x;
+    </script> -->
+
+    <!-- //Generator function -->
+<!-- 
+    <script>
+      function* generatedFun() {
+        yield 1;
+        yield 2;
+        return 3;
+      }
+      var generator = generatedFun();
+      let one = generator.next();
+      let two = generator.next();
+      let three = generator.next();
+
+      alert(JSON.stringify(one));
+      alert(JSON.stringify(two));
+      alert(JSON.stringify(three));
+    </script> -->
+    <script>
+        var a=10;
+        function fun(){
+            var b=40;
+            var c=a+b;
+             alert(c)
+        }
+        fun();
+           
+    </script>
+  </body>
+</html>

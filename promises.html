@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Promises</title>
+  </head>
+  <body>
+    <p id="pro"></p>
+    <script>
+      let vote = new Promise(function (resolve, reject) {
+        eligibility = true;
+
+        if (eligibility) resolve();
+        else reject();
+      });
+      vote
+
+        .then(function () {
+          alert("He/she is eligibile");
+        })
+        .catch(function () {
+          alert("He/she give vote");
+        });
+    </script>
+  </body>
+</html>
